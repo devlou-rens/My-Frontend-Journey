@@ -55,7 +55,6 @@ I focus on **understanding the logic**, not just writing code.
 * Arrays 
 * Loops     
 * DOM        
-
 ---
 
 ## Notes
