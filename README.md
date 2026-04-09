@@ -48,7 +48,7 @@ I focus on **understanding the logic**, not just writing code.
 
 ---
 
-## Progress 
+## Progress
 * Basics
 * Conditions
 * Functions
