@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin-Flip Game</title>
+</head>
+<body>
+    <p>Coin-Flip Game</p>
+
+    <button onclick="flipCoin('Head')">Head</button>
+    <button onclick="flipCoin('Tail')">Tail</button>
+    <script>
+        function flipCoin(playerChoice){
+            const computerChoice = Math.floor(Math.random()* 2);
+            let result = '';
+            let computer = '';
+            
+            computerChoice ? computer='Head' : computer='Tail';
+
+            playerChoice === computer ? result = 'You win' : result = 'You lose';
+            
+            alert(`Your guess is ${playerChoice} \n Computer: ${computer} \n Result: ${result}`);
+        }
+    </script>
+</body>
+</html>

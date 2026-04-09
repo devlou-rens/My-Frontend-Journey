@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissors</title>
+</head>
+<body>
+    <p>Rock Paper Scissors</p>
+
+    <button onclick="playRound('rock')">Rock</button>
+
+    <button onclick="playRound('paper')">Paper</button>
+
+    <button onclick="playRound('scissors')">Scissors</button>
+
+    <script>
+        function playRound(playerSelection){
+            const choice = ["rock", "paper", "scissors"];
+
+            const computerSelection = choice[Math.floor(Math.random() * 3)];
+
+            let result = '';
+
+            if (playerSelection === computerSelection){
+                result = "It's a tie";
+            }else if (
+                (playerSelection === "rock" && computerSelection === "scissors") ||
+                (playerSelection === "paper" && computerSelection === "rock") ||
+                (playerSelection === "scissors" && computerSelection === "paper")
+            ) {
+                result = "You win!";
+            } else {
+                result = "You lose!";
+            }
+            
+            alert(`Player: ${playerSelection}, Computer: ${computerSelection}. ${result}`);
+
+        }
+    </script>
+</body>
+</html>
