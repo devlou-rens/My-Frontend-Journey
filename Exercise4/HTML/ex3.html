@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise4-3</title>
+</head>
+<body>
+    <script>
+        let convertLength = (length, from, to) => {
+            const units = {
+                km: 1000, 
+                miles: 1609.34,
+                ft: 0.3048
+            }
+
+            if (!units[from] || !units[to]){
+                return `Invalid unit: ${from} or ${to}`;
+            }
+            else if (from === to){
+                return `Invalid unit: ${from}`;
+            }
+            else{
+            const valueInlength = length * units[from];
+            const convertedValue = valueInlength / units[to];
+            return `${Math.round(convertedValue)} ${to}`;
+            }
+    }
+        console.log(convertLength(50,'miles','km'));
+        console.log(convertLength(32,'km','miles'));
+        console.log(convertLength(50,'km','km')); 
+        console.log(convertLength(50,'kg','km')); 
+        console.log(convertLength(50,'km','kg'));
+
+        console.log(convertLength(5,'miles','km'));
+        console.log(convertLength(5,'miles','ft'));
+        console.log(convertLength(5,'km','ft'));
+    </script>
+</body>
+</html>
