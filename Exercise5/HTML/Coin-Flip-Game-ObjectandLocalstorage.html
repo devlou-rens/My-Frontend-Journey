@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin-Flip Game with Object and Local Storage</title>
+</head>
+<body>
+    <p>Coin-Flip Game</p>
+
+    <button onclick="flipCoin('Head')">Head</button>
+    <button onclick="flipCoin('Tail')">Tail</button>
+    <script>
+        /*let  score = {
+            wins: 0,
+            losses: 0,
+        };*/
+
+        let score = JSON.parse(localStorage.getItem('score')) || {
+            wins: 0,
+            losses: 0,
+        };
+
+        const flipCoin = (playerChoice) => {
+            const computerChoice = Math.floor(Math.random()* 2);
+            let result = '';
+            let computer = '';
+            
+            computerChoice ? computer='Head' : computer='Tail';
+
+            playerChoice === computer ? result = 'You win' : result = 'You lose';
+            
+            if (result === 'You win'){
+                score.wins += 1;
+            }else if (result === 'You lose'){
+                score.losses += 1;
+            }
+
+            localStorage.setItem('score', JSON.stringify(score));
+
+            alert(`Your guess is ${playerChoice}\nComputer: ${computer}\nResult: ${result}
+Win: ${score.wins} 
+Lose: ${score.losses}`);
+        }
+    </script>
+</body>
+</html>
