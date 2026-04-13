@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Exercise</title>
+</head>
+<body>
+    <button>DOM</button>
+    <button onclick="changeBtn()" class="domClass">Change</button>
+    <script>
+        console.log(document.querySelector('button'));
+
+        const changeBtn = () => {
+            const buttonElement = document.querySelector('.domClass').innerHTML;
+            if (buttonElement === 'Change'){
+                document.querySelector('.domClass').innerHTML = 'Changed';
+            }
+        }
+    </script>
+</body>
+</html>
