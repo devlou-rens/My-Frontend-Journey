@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Exercise 1</title>
+</head>
+<body>
+    <button onclick="choseHeadsBtn()" class="jshead">heads</button>
+    <button onclick="choseTailsBtn()" class="jstail">tails</button>
+    <p class="jsDisplay"></p>
+    <script>
+        const choseHeadsBtn = () => {
+            const headBtn = document.querySelector('.jshead').innerHTML;
+            if (headBtn){
+                document.querySelector('.jsDisplay').innerHTML = "You chose: heads";
+            }
+        }
+        const choseTailsBtn = () => {
+            const tailBtn = document.querySelector('.jstail').innerHTML;
+            if (tailBtn){
+                document.querySelector('.jsDisplay').innerHTML = "You chose: tails";
+            }
+        }
+    </script>
+</body>
+</html>
