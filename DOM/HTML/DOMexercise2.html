@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Exercise 2</title>
+</head>
+<body>
+    <input placeholder="Name" class="jsInputName" onkeydown="handleKeydown()"/>
+    <button onclick="submitBtn()" class="jsSubmit">Submit</button>
+    <p class="jsResult"></p>
+
+    <script>
+        let submitBtn = () => {
+            const inputNameElement = document.querySelector('.jsInputName');
+            const submitBtnElement = document.querySelector('.jsSubmit').innerHTML;
+            let textInput = inputNameElement.value;
+
+            if (submitBtnElement){
+                document.querySelector('.jsResult').innerHTML = `Your name is: ${textInput}`;
+            }
+        }
+
+        let handleKeydown = () => {
+            if (event.key === 'Enter'){
+                submitBtn();
+            }
+        }
+    </script>
+</body>
+</html>
