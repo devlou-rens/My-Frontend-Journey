@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Exercise 4</title>
+</head>
+<body>
+    <input placeholder="Text" onkeyup="displayTxt()" class="jsInput">
+    <p class="jsTextResult"></p>
+    <script>
+        let displayTxt = () => {
+            const inputElement = document.querySelector('.jsInput');
+            const textValue = inputElement.value;
+            if(textValue){
+                document.querySelector('.jsTextResult').innerHTML = textValue;
+            }
+        }
+    </script>
+</body>
+</html>
