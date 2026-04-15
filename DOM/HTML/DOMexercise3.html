@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Exercise 3</title>
+</head>
+<body>
+    <p>Amazon Shipping Calculator</p>
+    <input placeholder="Cost of order" class="jsCostInput" 
+    onkeydown="handleCostKeydown()"/>
+
+    <button onclick="calculateElement()">Calculate</button>
+    <p class="jsCostResult"></p>
+    
+    <script>
+        let handleCostKeydown  = () => {
+            if (event.key === 'Enter'){
+                calculateElement();
+            }
+        }
+
+        let calculateElement = () => {
+            const inputElement = document.querySelector('.jsCostInput');
+
+            let cost = eval(inputElement.value);
+
+            if (cost < 40) {
+                cost = cost + 10;
+            }
+            document.querySelector('.jsCostResult').innerHTML = `$${cost.toFixed(2)}`;
+        }
+
+    </script>
+</body>
+</html> 
