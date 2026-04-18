@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Exercise 6</title>
+</head>
+<body>
+    <p class="jsCalculator">Calculator</p>
+
+    <p>
+        <button onclick="updateCalculation('1')">1</button>
+
+        <button onclick="updateCalculation('2')">2</button>
+
+        <button onclick="updateCalculation('3')">3</button>
+
+        <button onclick="updateCalculation(' + ')">+</button>
+    </p>
+
+    <p>
+        <button onclick="updateCalculation('4')">4</button>
+
+        <button onclick="updateCalculation('5')">5</button>
+
+        <button onclick="updateCalculation('6')">6</button>
+
+        <button onclick="updateCalculation(' - ')">-</button>
+    </p>
+
+    <p>
+        <button onclick="updateCalculation('7')">7</button>
+
+        <button onclick="updateCalculation('8')">8</button>
+
+        <button onclick="updateCalculation('9')">9</button>
+
+        <button onclick="updateCalculation(' * ')">*</button>
+    </p>
+
+    <p>
+        <button onclick="updateCalculation('0')">0</button>
+
+        <button onclick="updateCalculation('.')">.</button>
+
+        <button onclick="showResult()">=</button>
+
+        <button onclick="updateCalculation(' / ')">/</button>
+    </p>
+
+    <button onclick="clearAll()">Clear</button>
+
+    <script>
+        //saved
+        let calculation = localStorage.getItem('calculation') || '';
+        
+        let updateCalculation = (number) => {
+            calculation += number;
+            document.querySelector('.jsCalculator').innerHTML = calculation;
+
+            //save
+            localStorage.setItem('calculation', calculation);
+        }
+        let showResult = () => {
+            calculation = eval(calculation) ;
+            if(eval(calculation) === 0){
+                document.querySelector('.jsCalculator').innerHTML = "Can't divide by zero.";
+            }else{
+            document.querySelector('.jsCalculator').innerHTML = `Result: ${calculation}`;
+            }
+        }
+        
+        let clearAll = () => {
+            calculation ='';
+            document.querySelector('.jsCalculator').innerHTML = 'Cleared.';
+        }
+
+    </script>
+</body>
+</html>
