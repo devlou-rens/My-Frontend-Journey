@@ -1,0 +1,15 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.btnAdd{
+    background-color: rgb(255, 216, 20);
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
