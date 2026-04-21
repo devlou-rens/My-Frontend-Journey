@@ -1,0 +1,25 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.btn{
+    background-color: rgb(182, 182, 182);
+    color: black;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.is-toggled {
+    background-color: black;
+    color:white;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+
