@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-Projects</title>
+</head>
+<body>
+    <p>YouTube Subscribe Button</p>
+    <button onclick="subscribe()" class="js-subsButton"> Subscribe </button>
+    
+    
+    <p>Amazon Shipping Calculator</p>
+    <p>Order under $40 = +$10 Shipping</p>
+    <p>Orders over $40 = FREE Shipping.</p>
+    <input placeholder="Cost of order" class="jsCostInput" 
+    onkeydown="handleCostKeydown()"/>
+
+    <button onclick="calculateElement()">Calculate</button>
+    <p class="jsCostResult"></p>
+
+
+
+    <script>
+        let handleCostKeydown  = () => {
+            if (event.key === 'Enter'){
+                calculateElement();
+            }
+        }
+
+        let calculateElement = () => {
+            const inputElement = document.querySelector('.jsCostInput');
+
+            let cost = eval(inputElement.value);
+
+            if (cost < 40) {
+                cost = cost + 10;
+            }
+            document.querySelector('.jsCostResult').innerHTML = `$${cost}`;
+        }
+
+
+        let subscribe = () => {
+            const btnElement = document.querySelector('.js-subsButton');
+
+            if(btnElement.innerText === 'Subscribe'){
+                btnElement.innerHTML = 'Subscribed';
+            }else{
+                btnElement.innerHTML = 'Subscribe';
+            } 
+        }   
+    </script>
+</body>
+</html>
