@@ -35,7 +35,7 @@ The goal of this repository is to:
 
 ---
 
-## 📝 How I Practice
+## How I Practice
 
 Each folder contains:
 
@@ -71,4 +71,4 @@ To build a strong foundation in JavaScript by mastering exercises before moving 
 
 ---
 
-⭐ Thanks for checking out my learning journey!
+Thanks for checking out my learning journey!
