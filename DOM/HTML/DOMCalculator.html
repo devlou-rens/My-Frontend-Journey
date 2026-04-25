@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Calculator</title>
+    <link rel="stylesheet" href="/DOM/CSS/DOMCalculator.css">
+</head>
+<body>
+    <p class="jsDisplay">Calculator</p>
+
+    <p>
+        <button class="btnNumber" onclick="updateCalculation('1')">1</button>
+
+        <button class="btnNumber" onclick="updateCalculation('2')">2</button>
+
+        <button class="btnNumber" onclick="updateCalculation('3')">3</button>
+
+        <button class="btnOperators" onclick="updateCalculation(' + ')">+</button>
+    </p>
+
+    <p>
+        <button class="btnNumber" onclick="updateCalculation('4')">4</button>
+
+        <button class="btnNumber" onclick="updateCalculation('5')">5</button>
+
+        <button class="btnNumber" onclick="updateCalculation('6')">6</button>
+
+        <button class="btnOperators" onclick="updateCalculation(' - ')">-</button>
+    </p>
+
+    <p>
+        <button class="btnNumber" onclick="updateCalculation('7')">7</button>
+
+        <button class="btnNumber" onclick="updateCalculation('8')">8</button>
+
+        <button class="btnNumber" onclick="updateCalculation('9')">9</button>
+
+        <button class="btnOperators" onclick="updateCalculation(' * ')">*</button>
+    </p>
+
+    <p>
+        <button class="btnNumber" onclick="updateCalculation('0')">0</button>
+
+        <button class="btnNumber" onclick="updateCalculation('.')">.</button>
+
+        <button class="btnNumber" onclick="showResult()">=</button>
+
+        <button class="btnOperators" onclick="updateCalculation(' / ')">/</button>
+    </p>
+
+    <button class="clearBtn" onclick="clearAll()">Clear</button>
+</body>
+    <script src="/DOM/JavaScript/DOMcalculator.js"></script>
+</html>
