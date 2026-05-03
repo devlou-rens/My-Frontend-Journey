@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1</title>
+</head>
+<body>
+    <script>
+        const adds = function addition(){
+            console.log(2 + 3);
+        }
+        adds();
+        adds();
+
+        function runTwice(fun){
+            fun();
+            fun();
+        }
+
+        runTwice(function() {
+            console.log('runTwice');
+        });
+
+        function add(){
+            console.log(5);
+        }
+        runTwice(add);
+
+
+    </script>
+</body>
+</html>
