@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2</title>
+</head>
+<body>
+    <button onclick="btn()" class="js-button">Start</button>
+
+    <button onclick="btn1()" class="js-button1">Start 1</button>
+
+    <button  onclick="btnCart()" class="js-cart">Add to cart</button>
+    <p class="js-message"></p>
+    <script>
+        const btn = () => {
+            const btnElement = document.querySelector('.js-button');
+            setTimeout(function() {
+                btnElement.innerHTML = 'Finished!';
+            }, 1000);
+        }
+
+        const btn1 = () => {
+            const btnElement = document.querySelector('.js-button1');
+
+            btnElement.innerHTML = 'Loading...';
+
+            setTimeout(() => {
+                btnElement.innerHTML = 'Finished!';
+            }, 1000);
+        }
+
+        let timeoutId;
+        const btnCart = () => {
+            const cartButton = document.querySelector('.js-cart');
+            const message = document.querySelector('.js-message');
+            
+            message.innerHTML = 'Added';
+
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(() => {
+                message.innerHTML = '';
+            }, 2000);
+        }
+
+
+    </script>
+</body>
+</html>
