@@ -6,7 +6,7 @@ const todoList = JSON.parse(localStorage.getItem('todoList')) || [{
     dueDate:'2026-12-22'}];
 
 renderTodoList();
-
+ 
 function renderTodoList(){
     let todoListHTML = '';
 
